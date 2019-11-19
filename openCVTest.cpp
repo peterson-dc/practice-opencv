@@ -1,10 +1,15 @@
 #include<iostream>
+#include<opencv2/core/core.hpp>
 #include<opencv2/highgui.hpp>
+#include<opencv2/imgproc/imgproc.hpp>
 
 using namespace std;
 using namespace cv;
 
 int main() {
+  Mat imgGrayscale;
+  Mat imgThresh;
+
   VideoCapture cam; // highgui.h
   cam.open(0);
 
@@ -22,7 +27,18 @@ int main() {
   while (1) {
     cam >> img;
 
-    imshow("Hello CV", img);
+    cvtColor(img, imgGrayscale, COLOR_BGR2GRAY);
+    adaptiveThreshold(imgGrayscale,           // input image
+        imgThresh,                              // output image
+        255,                                    // make pixels that pass the threshold full white
+        ADAPTIVE_THRESH_GAUSSIAN_C,         // use gaussian rather than mean, seems to give better results
+        THRESH_BINARY_INV,                  // invert so foreground will be white, background will be black
+        101,                                     // size of a pixel neighborhood used to calculate threshold value
+        2);
+    // imshow("Original CV", img);
+    // imshow("Grayscale CV", imgGrayscale);
+    imshow("Threshold CV", imgThresh);
+
     waitKey(50);
   }
 
