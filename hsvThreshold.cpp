@@ -2,7 +2,12 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/videoio.hpp"
 #include <iostream>
+#include <string.h>
+#include <time.h>
+#include <chrono>
+#include <thread>
 
+using namespace std;
 using namespace cv;
 
 /** Global Variables */
@@ -55,10 +60,6 @@ static void on_high_V_thresh_trackbar(int, void *)
 
 int main(int argc, char* argv[])
 {
-    //! [cap]
-    VideoCapture cap(argc > 1 ? atoi(argv[1]) : 0);
-    //! [cap]
-
     //! [window]
     namedWindow(window_capture_name);
     namedWindow(window_detection_name);
@@ -74,17 +75,16 @@ int main(int argc, char* argv[])
     createTrackbar("High V", window_detection_name, &high_V, max_value, on_high_V_thresh_trackbar);
     //! [trackbar]
 
-    Mat frame, frame_HSV, frame_threshold;
+    Mat frame_HSV, frame_threshold;
+
+    Mat frame = imread("../Hallway2.png", 1);
+
+    // Convert from BGR to HSV colorspace
+    cvtColor(frame, frame_HSV, COLOR_BGR2HSV);
+
     while (true) {
         //! [while]
-        cap >> frame;
-        if(frame.empty())
-        {
-            break;
-        }
-
-        // Convert from BGR to HSV colorspace
-        cvtColor(frame, frame_HSV, COLOR_BGR2HSV);
+        // this_thread::sleep_for(chrono::milliseconds(1000));
         // Detect the object based on HSV Range Values
         inRange(frame_HSV, Scalar(low_H, low_S, low_V), Scalar(high_H, high_S, high_V), frame_threshold);
         //! [while]
