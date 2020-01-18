@@ -1,9 +1,9 @@
-#include "opencv2/imgproc.hpp"
-#include "opencv2/highgui.hpp"
-#include "opencv2/videoio.hpp"
-#include "opencv2/core/types.hpp"
-#include "opencv2/tracking.hpp"
-#include "opencv2/opencv.hpp"
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/core/types.hpp>
+#include <opencv2/tracking.hpp>
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace cv;
@@ -23,13 +23,13 @@ int main(int argc, char* argv[])
 
     Rect2d rectangle = selectROI(imgGaussian);
     Mat croppedImg = imgGaussian(rectangle);
-    Canny(croppedImg, edges, 100, 200, 5, false);
+    Canny(croppedImg, edges, 100, 200, 3, false);
 
     cout<<"Showing processed image" << endl;
     while(true) {
         imshow("Cropped", croppedImg);
-        // imshow("Grayscale", imgGrayscale);
-        // imshow("Gaussian", imgGaussian);
+        imshow("Grayscale", imgGrayscale);
+        imshow("Gaussian", imgGaussian);
         imshow("Canny", edges);
         waitKey(50);
     }

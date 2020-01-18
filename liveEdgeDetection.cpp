@@ -11,8 +11,15 @@
 using namespace std;
 using namespace cv;
 
-int main() 
+int main(int argc, char* argv[]) 
 {
+    double minRange, maxRange;
+    int apertureSize;
+
+    minRange = 100.0;
+    maxRange = 200.0;
+    apertureSize = 5;
+
   VideoCapture cam; // highgui.h
   cam.open(0);
 
@@ -26,19 +33,19 @@ int main()
     cam.open(1);  // 2nd cam
   }
 
-  Mat img, imgGrayscale, imgGaussian, edges;
+  Mat img, imgGrayscale, imgGaussian, edges, houghLines;
 
     while (1) 
     {
         cam >> img;
-
+        // Converting to grayscale
         cvtColor(img, imgGrayscale, COLOR_BGR2GRAY);
+        // Applying Gaussian blur
         GaussianBlur(imgGrayscale, imgGaussian, Size(5,5), 0, 0, BORDER_DEFAULT);
 
-        // Rect2d rectangle = selectROI(imgGaussian);
-        // Mat croppedImg = imgGaussian(rectangle);
-        Canny(imgGaussian, edges, 100, 200, 5, false);
-        imshow("Canny", edges);
+        // Applying Canny edge detection
+        Canny(imgGaussian, edges, minRange, maxRange, apertureSize, false);
+        imshow("Canny Edges", edges);
 
         waitKey(50);
     }
