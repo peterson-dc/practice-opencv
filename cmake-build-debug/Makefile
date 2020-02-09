@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ObjectDetection
+
+# Build rule for target.
+ObjectDetection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ObjectDetection
+.PHONY : ObjectDetection
+
+# fast build rule for target.
+ObjectDetection/fast:
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/build
+.PHONY : ObjectDetection/fast
+
+#=============================================================================
 # Target rules for targets named LiveEdgeDetection
 
 # Build rule for target.
@@ -161,6 +174,19 @@ FloorMapper: cmake_check_build_system
 FloorMapper/fast:
 	$(MAKE) -f CMakeFiles/FloorMapper.dir/build.make CMakeFiles/FloorMapper.dir/build
 .PHONY : FloorMapper/fast
+
+#=============================================================================
+# Target rules for targets named ImageChange
+
+# Build rule for target.
+ImageChange: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ImageChange
+.PHONY : ImageChange
+
+# fast build rule for target.
+ImageChange/fast:
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/build
+.PHONY : ImageChange/fast
 
 #=============================================================================
 # Target rules for targets named ContoursCVTest
@@ -296,6 +322,33 @@ hsvThreshold.cpp.s:
 	$(MAKE) -f CMakeFiles/HSVThreshold.dir/build.make CMakeFiles/HSVThreshold.dir/hsvThreshold.cpp.s
 .PHONY : hsvThreshold.cpp.s
 
+imageChange.o: imageChange.cpp.o
+
+.PHONY : imageChange.o
+
+# target to build an object file
+imageChange.cpp.o:
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/imageChange.cpp.o
+.PHONY : imageChange.cpp.o
+
+imageChange.i: imageChange.cpp.i
+
+.PHONY : imageChange.i
+
+# target to preprocess a source file
+imageChange.cpp.i:
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/imageChange.cpp.i
+.PHONY : imageChange.cpp.i
+
+imageChange.s: imageChange.cpp.s
+
+.PHONY : imageChange.s
+
+# target to generate assembly for a file
+imageChange.cpp.s:
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/imageChange.cpp.s
+.PHONY : imageChange.cpp.s
+
 liveEdgeDetection.o: liveEdgeDetection.cpp.o
 
 .PHONY : liveEdgeDetection.o
@@ -322,6 +375,33 @@ liveEdgeDetection.s: liveEdgeDetection.cpp.s
 liveEdgeDetection.cpp.s:
 	$(MAKE) -f CMakeFiles/LiveEdgeDetection.dir/build.make CMakeFiles/LiveEdgeDetection.dir/liveEdgeDetection.cpp.s
 .PHONY : liveEdgeDetection.cpp.s
+
+objectDetection.o: objectDetection.cpp.o
+
+.PHONY : objectDetection.o
+
+# target to build an object file
+objectDetection.cpp.o:
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/objectDetection.cpp.o
+.PHONY : objectDetection.cpp.o
+
+objectDetection.i: objectDetection.cpp.i
+
+.PHONY : objectDetection.i
+
+# target to preprocess a source file
+objectDetection.cpp.i:
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/objectDetection.cpp.i
+.PHONY : objectDetection.cpp.i
+
+objectDetection.s: objectDetection.cpp.s
+
+.PHONY : objectDetection.s
+
+# target to generate assembly for a file
+objectDetection.cpp.s:
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/objectDetection.cpp.s
+.PHONY : objectDetection.cpp.s
 
 openCVTest.o: openCVTest.cpp.o
 
@@ -357,11 +437,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... ObjectDetection"
 	@echo "... LiveEdgeDetection"
 	@echo "... EdgeDetection"
 	@echo "... HSVThreshold"
 	@echo "... FloorMapper"
 	@echo "... edit_cache"
+	@echo "... ImageChange"
 	@echo "... ContoursCVTest"
 	@echo "... OpenCVTest"
 	@echo "... contoursCVTest.o"
@@ -376,9 +458,15 @@ help:
 	@echo "... hsvThreshold.o"
 	@echo "... hsvThreshold.i"
 	@echo "... hsvThreshold.s"
+	@echo "... imageChange.o"
+	@echo "... imageChange.i"
+	@echo "... imageChange.s"
 	@echo "... liveEdgeDetection.o"
 	@echo "... liveEdgeDetection.i"
 	@echo "... liveEdgeDetection.s"
+	@echo "... objectDetection.o"
+	@echo "... objectDetection.i"
+	@echo "... objectDetection.s"
 	@echo "... openCVTest.o"
 	@echo "... openCVTest.i"
 	@echo "... openCVTest.s"

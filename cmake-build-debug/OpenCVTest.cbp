@@ -27,6 +27,50 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="ObjectDetection">
+				<Option output="/Users/davis/GitHub/practice-opencv/cmake-build-debug/ObjectDetection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/davis/GitHub/practice-opencv/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/opencv/4.1.1_2/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 ObjectDetection"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ObjectDetection/fast">
+				<Option output="/Users/davis/GitHub/practice-opencv/cmake-build-debug/ObjectDetection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/davis/GitHub/practice-opencv/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/opencv/4.1.1_2/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 ObjectDetection/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="LiveEdgeDetection">
 				<Option output="/Users/davis/GitHub/practice-opencv/cmake-build-debug/LiveEdgeDetection" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/davis/GitHub/practice-opencv/cmake-build-debug"/>
@@ -213,6 +257,50 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="ImageChange">
+				<Option output="/Users/davis/GitHub/practice-opencv/cmake-build-debug/ImageChange" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/davis/GitHub/practice-opencv/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/opencv/4.1.1_2/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageChange"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageChange/fast">
+				<Option output="/Users/davis/GitHub/practice-opencv/cmake-build-debug/ImageChange" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/davis/GitHub/practice-opencv/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/opencv/4.1.1_2/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageChange/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davis/GitHub/practice-opencv/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="ContoursCVTest">
 				<Option output="/Users/davis/GitHub/practice-opencv/cmake-build-debug/ContoursCVTest" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/davis/GitHub/practice-opencv/cmake-build-debug"/>
@@ -314,8 +402,14 @@
 		<Unit filename="/Users/davis/GitHub/practice-opencv/hsvThreshold.cpp">
 			<Option target="HSVThreshold"/>
 		</Unit>
+		<Unit filename="/Users/davis/GitHub/practice-opencv/imageChange.cpp">
+			<Option target="ImageChange"/>
+		</Unit>
 		<Unit filename="/Users/davis/GitHub/practice-opencv/liveEdgeDetection.cpp">
 			<Option target="LiveEdgeDetection"/>
+		</Unit>
+		<Unit filename="/Users/davis/GitHub/practice-opencv/objectDetection.cpp">
+			<Option target="ObjectDetection"/>
 		</Unit>
 		<Unit filename="/Users/davis/GitHub/practice-opencv/openCVTest.cpp">
 			<Option target="OpenCVTest"/>

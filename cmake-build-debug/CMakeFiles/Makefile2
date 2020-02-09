@@ -53,20 +53,24 @@ CMAKE_BINARY_DIR = /Users/davis/GitHub/practice-opencv/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/ObjectDetection.dir/all
 all: CMakeFiles/LiveEdgeDetection.dir/all
 all: CMakeFiles/EdgeDetection.dir/all
 all: CMakeFiles/HSVThreshold.dir/all
 all: CMakeFiles/FloorMapper.dir/all
+all: CMakeFiles/ImageChange.dir/all
 all: CMakeFiles/ContoursCVTest.dir/all
 all: CMakeFiles/OpenCVTest.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/ObjectDetection.dir/clean
 clean: CMakeFiles/LiveEdgeDetection.dir/clean
 clean: CMakeFiles/EdgeDetection.dir/clean
 clean: CMakeFiles/HSVThreshold.dir/clean
 clean: CMakeFiles/FloorMapper.dir/clean
+clean: CMakeFiles/ImageChange.dir/clean
 clean: CMakeFiles/ContoursCVTest.dir/clean
 clean: CMakeFiles/OpenCVTest.dir/clean
 
@@ -78,13 +82,40 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
+# Target rules for target CMakeFiles/ObjectDetection.dir
+
+# All Build rule for target.
+CMakeFiles/ObjectDetection.dir/all:
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/depend
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target ObjectDetection"
+.PHONY : CMakeFiles/ObjectDetection.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ObjectDetection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ObjectDetection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ObjectDetection.dir/rule
+
+# Convenience name for target.
+ObjectDetection: CMakeFiles/ObjectDetection.dir/rule
+
+.PHONY : ObjectDetection
+
+# clean rule for target.
+CMakeFiles/ObjectDetection.dir/clean:
+	$(MAKE) -f CMakeFiles/ObjectDetection.dir/build.make CMakeFiles/ObjectDetection.dir/clean
+.PHONY : CMakeFiles/ObjectDetection.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/LiveEdgeDetection.dir
 
 # All Build rule for target.
 CMakeFiles/LiveEdgeDetection.dir/all:
 	$(MAKE) -f CMakeFiles/LiveEdgeDetection.dir/build.make CMakeFiles/LiveEdgeDetection.dir/depend
 	$(MAKE) -f CMakeFiles/LiveEdgeDetection.dir/build.make CMakeFiles/LiveEdgeDetection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target LiveEdgeDetection"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target LiveEdgeDetection"
 .PHONY : CMakeFiles/LiveEdgeDetection.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,6 +217,33 @@ CMakeFiles/FloorMapper.dir/clean:
 .PHONY : CMakeFiles/FloorMapper.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/ImageChange.dir
+
+# All Build rule for target.
+CMakeFiles/ImageChange.dir/all:
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/depend
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target ImageChange"
+.PHONY : CMakeFiles/ImageChange.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ImageChange.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ImageChange.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ImageChange.dir/rule
+
+# Convenience name for target.
+ImageChange: CMakeFiles/ImageChange.dir/rule
+
+.PHONY : ImageChange
+
+# clean rule for target.
+CMakeFiles/ImageChange.dir/clean:
+	$(MAKE) -f CMakeFiles/ImageChange.dir/build.make CMakeFiles/ImageChange.dir/clean
+.PHONY : CMakeFiles/ImageChange.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/ContoursCVTest.dir
 
 # All Build rule for target.
@@ -219,7 +277,7 @@ CMakeFiles/ContoursCVTest.dir/clean:
 CMakeFiles/OpenCVTest.dir/all:
 	$(MAKE) -f CMakeFiles/OpenCVTest.dir/build.make CMakeFiles/OpenCVTest.dir/depend
 	$(MAKE) -f CMakeFiles/OpenCVTest.dir/build.make CMakeFiles/OpenCVTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target OpenCVTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/davis/GitHub/practice-opencv/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target OpenCVTest"
 .PHONY : CMakeFiles/OpenCVTest.dir/all
 
 # Build rule for subdir invocation for target.
