@@ -33,6 +33,8 @@
 
 TestProgram
 **/build
-
+**/cmake-build-debug
 .vscode/
 *.mov
+
+
